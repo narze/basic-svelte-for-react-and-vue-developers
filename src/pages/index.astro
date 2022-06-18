@@ -3,12 +3,12 @@
 import '../styles/global.css';
 // Component Imports
 import { A, B as Renamed } from '../components';
-import * as react from '../components/ReactCounter.jsx';
+import * as react from '../components/counter/ReactCounter.jsx';
 import { PreactCounter } from '../components/PreactCounter.tsx';
 import PreactSFC from '../components/PreactSFC.tsx';
 import SolidCounter from '../components/SolidCounter.tsx';
-import VueCounter from '../components/VueCounter.vue';
-import SvelteCounter from '../components/SvelteCounter.svelte';
+import VueCounter from '../components/counter/VueCounter.vue';
+import SvelteCounter from '../components/counter/SvelteCounter.svelte';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -27,13 +27,13 @@ import SvelteCounter from '../components/SvelteCounter.svelte';
 				<p>What's up?</p>
 			</react.Counter>
 
-			<PreactCounter client:visible>
+			<!-- <PreactCounter client:visible>
 				<h1>Hello Preact!</h1>
-			</PreactCounter>
+			</PreactCounter> -->
 
-			<SolidCounter client:visible>
+			<!-- <SolidCounter client:visible>
 				<h1>Hello Solid!</h1>
-			</SolidCounter>
+			</SolidCounter> -->
 
 			<VueCounter client:visible>
 				<h1>Hello Vue!</h1>
