@@ -1,0 +1,23 @@
+---
+import { Code } from "astro/components"
+import * as fs from "node:fs"
+import * as path from "node:path"
+
+import Component from "../../components/component-structure/vue.vue"
+
+const filepath = path.join(
+  process.cwd(),
+  "src",
+  "components/component-structure/vue.vue"
+)
+
+  const code = fs.readFileSync(`${filepath}`, "utf8")
+---
+
+<Component client:visible />
+
+<Code
+  code={code}
+  lang="vue"
+  theme="one-dark-pro"
+/>

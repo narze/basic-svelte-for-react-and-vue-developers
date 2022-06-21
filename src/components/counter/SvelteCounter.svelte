@@ -1,22 +1,17 @@
-
 <script>
-  let children;
-  let count = 0;
+  let count = 0
 
   function add() {
-		count += 1;
-	}
+    count += 1
+  }
 
   function subtract() {
-		count -= 1;
-	}
+    count -= 1
+  }
 </script>
 
 <div class="counter">
-  <button on:click={subtract}>-</button>
-  <pre>{ count }</pre>
-  <button on:click={add}>+</button>
-</div>
-<div class="counter-message">
-  <slot />
+  <button class="border rounded px-2 py-1" on:click={subtract}>-</button>
+  <pre>{count}</pre>
+  <button class="border rounded px-2 py-1" on:click={add}>+</button>
 </div>
