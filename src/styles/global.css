@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 .counter {
@@ -27,5 +27,5 @@ body {
 .hljs,
 .astro-code {
   padding: 8px;
-  background: black !important;
+  /* background: black !important; */
 }

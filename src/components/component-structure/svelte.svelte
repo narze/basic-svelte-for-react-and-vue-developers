@@ -1,5 +1,9 @@
 <script lang="js">
-  let counter = 1
+  import { onMount } from "svelte"
+
+  onMount(() => {
+    console.log("Hello from Svelte!")
+  })
 </script>
 
-Hello! {counter}
+Hello, world!

@@ -1,9 +1,11 @@
-import "react"
+import { useEffect } from "react"
 
-export default function React() {
-  return (
-    <>
-      <h1>Hello!</h1>
-    </>
-  )
+import "../../styles/react.css"
+
+export default function Component() {
+  useEffect(() => {
+    console.log("Hello from React!")
+  }, [])
+
+  return <h1>Hello, world!</h1>
 }

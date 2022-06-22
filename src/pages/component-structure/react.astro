@@ -14,10 +14,32 @@ const filepath = path.join(
   const code = fs.readFileSync(`${filepath}`, "utf8")
 ---
 
-<Component client:visible />
-
-<Code
-  code={code}
-  lang="javascript"
-  theme="one-dark-pro"
-/>
+<main class="h-screen p-12 flex flex-col gap-4">
+  <section id="header" class="flex flex-col gap-4">
+    <div class="">
+      <a href="/" class="flex-1">&lt; Back</a>
+    </div>
+    <div class="gap-2 flex items-end">
+      <span class="text-5xl flex-1 capitalize">component structure: react</span>
+      <a href="react" class="text-2xl underline">[ React ]</a>
+      <a href="vue" class="text-2xl underline">[ Vue ]</a>
+      <a href="svelte" class="text-2xl underline">[ Svelte ]</a>
+    </div>
+  </section>
+  <section class="flex gap-4 h-full">
+    <div class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl">
+      <div class="scale-150">
+        <Code
+          code={code}
+          lang="javascript"
+          theme="one-dark-pro"
+        />
+      </div>
+    </div>
+    <div class="w-1/2 grid place-content-center h-full border rounded-xl">
+      <div class="scale-[3]">
+        <Component client:only={"react"} />
+      </div>
+    </div>
+  </section>
+</main>
