@@ -31,7 +31,7 @@ const code = fs.readFileSync(`${filepath}`, "utf8")
     </section>
     <section class="flex gap-4 h-full">
       <div
-        class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl"
+        class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl overflow-y-scroll no-scrollbar"
       >
         <div class="scale-150">
           <Code code={code.replaceAll(/\s*class(Name)?=\".+\"/g, "")} lang="vue" theme="one-dark-pro" />
