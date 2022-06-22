@@ -11,7 +11,7 @@ const filepath = path.join(
   "components/<%= component %>/<%= framework %>.<%= ext %>"
 )
 
-  const code = fs.readFileSync(`${filepath}`, "utf8")
+const code = fs.readFileSync(`${filepath}`, "utf8")
 ---
 
 <body data-theme="dark">
@@ -21,20 +21,21 @@ const filepath = path.join(
         <a href="/" class="flex-1">&lt; Back</a>
       </div>
       <div class="gap-2 flex items-end">
-        <span class="text-5xl flex-1 capitalize"><%= component.replaceAll("-", " ") %>: <%= framework %></span>
+        <span class="text-5xl flex-1 capitalize"
+          ><%= component.replaceAll("-", " ") %>: <%= framework %></span
+        >
         <a href="react" class="text-2xl underline">[ React ]</a>
         <a href="vue" class="text-2xl underline">[ Vue ]</a>
         <a href="svelte" class="text-2xl underline">[ Svelte ]</a>
       </div>
     </section>
     <section class="flex gap-4 h-full">
-      <div class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl">
+      <div
+        class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl"
+      >
         <div class="scale-150">
-          <Code
-            code={code}
-            lang="<%= codeLanguage %>"
-            theme="one-dark-pro"
-          />
+          <Code code={code.replaceAll(/\s*class(Name)?=\".+\"/g, "")} lang="<%=
+          codeLanguage %>" theme="one-dark-pro" />
         </div>
       </div>
       <div class="w-1/2 grid place-content-center h-full border rounded-xl">

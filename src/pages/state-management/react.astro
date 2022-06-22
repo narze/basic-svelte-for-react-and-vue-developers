@@ -3,12 +3,12 @@ import { Code } from "astro/components"
 import * as fs from "node:fs"
 import * as path from "node:path"
 
-import Component from "../../components/component-structure/react.jsx"
+import Component from "../../components/state-management/react.jsx"
 
 const filepath = path.join(
   process.cwd(),
   "src",
-  "components/component-structure/react.jsx"
+  "components/state-management/react.jsx"
 )
 
 const code = fs.readFileSync(`${filepath}`, "utf8")
@@ -22,7 +22,7 @@ const code = fs.readFileSync(`${filepath}`, "utf8")
       </div>
       <div class="gap-2 flex items-end">
         <span class="text-5xl flex-1 capitalize"
-          >component structure: react</span
+          >state management: react</span
         >
         <a href="react" class="text-2xl underline">[ React ]</a>
         <a href="vue" class="text-2xl underline">[ Vue ]</a>

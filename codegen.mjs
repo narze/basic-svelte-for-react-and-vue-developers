@@ -104,6 +104,24 @@ const createPlugin = () => {
             codeLanguage: "vue",
           },
           // TODO: add more components
+          {
+            component: "state-management",
+            framework: "react",
+            ext: "jsx",
+            codeLanguage: "javascript",
+          },
+          {
+            component: "state-management",
+            framework: "svelte",
+            ext: "svelte",
+            codeLanguage: "svelte",
+          },
+          {
+            component: "state-management",
+            framework: "vue",
+            ext: "vue",
+            codeLanguage: "vue",
+          },
         ]
 
         await Promise.all(
