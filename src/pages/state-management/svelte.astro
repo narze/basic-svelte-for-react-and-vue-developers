@@ -3,12 +3,14 @@ import { Code } from "astro/components"
 import * as fs from "node:fs"
 import * as path from "node:path"
 
+import '../../styles/global.css';
+
 import Component from "../../components/state-management/svelte.svelte"
 
 const filepath = path.join(
-  process.cwd(),
-  "src",
-  "components/state-management/svelte.svelte"
+process.cwd(),
+"src",
+"components/state-management/svelte.svelte"
 )
 
 const code = fs.readFileSync(`${filepath}`, "utf8")
@@ -31,13 +33,15 @@ const code = fs.readFileSync(`${filepath}`, "utf8")
     </section>
     <section class="flex gap-4 h-full">
       <div
-        class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl overflow-y-scroll no-scrollbar"
+        class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl overflow-y-scroll no-scrollbar p-8"
       >
         <div class="scale-150">
           <Code code={code.replaceAll(/\s*class(Name)?=\".+\"/g, "")} lang="svelte" theme="one-dark-pro" />
         </div>
       </div>
-      <div class="w-1/2 grid place-content-center h-full border rounded-xl">
+      <div
+        class="w-1/2 grid place-content-center h-full border rounded-xl overflow-y-scroll no-scrollbar p-8"
+      >
         <div class="scale-[3]">
           <Component client:only={"svelte"} />
         </div>
