@@ -83,46 +83,33 @@ const createPlugin = () => {
       "astro:config:setup": async (opts) => {
         console.log("astro:config:setup")
 
-        // Generate astro pages for each component & language
-        const pages = [
-          {
-            component: "component-structure",
-            framework: "react",
-            ext: "jsx",
-            codeLanguage: "javascript",
-          },
-          {
-            component: "component-structure",
-            framework: "svelte",
-            ext: "svelte",
-            codeLanguage: "svelte",
-          },
-          {
-            component: "component-structure",
-            framework: "vue",
-            ext: "vue",
-            codeLanguage: "vue",
-          },
-          // TODO: add more components
-          {
-            component: "state-management",
-            framework: "react",
-            ext: "jsx",
-            codeLanguage: "javascript",
-          },
-          {
-            component: "state-management",
-            framework: "svelte",
-            ext: "svelte",
-            codeLanguage: "svelte",
-          },
-          {
-            component: "state-management",
-            framework: "vue",
-            ext: "vue",
-            codeLanguage: "vue",
-          },
+        const components = [
+          "component-structure",
+          "state-management",
+          "computed-state",
         ]
+
+        // Generate astro pages for each component & language
+        const pages = components.flatMap((component) => [
+          {
+            component,
+            framework: "react",
+            ext: "jsx",
+            codeLanguage: "javascript",
+          },
+          {
+            component,
+            framework: "vue",
+            ext: "vue",
+            codeLanguage: "vue",
+          },
+          {
+            component,
+            framework: "svelte",
+            ext: "svelte",
+            codeLanguage: "svelte",
+          },
+        ])
 
         await Promise.all(
           pages.map(({ component, framework, ext, codeLanguage }) => {
