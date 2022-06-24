@@ -87,6 +87,7 @@ const createPlugin = () => {
           "component-structure",
           "state-management",
           "computed-state",
+          "data-binding",
         ]
 
         // Generate astro pages for each component & language
