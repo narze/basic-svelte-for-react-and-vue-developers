@@ -5,12 +5,12 @@ import * as path from "node:path"
 
 import '../../styles/global.css';
 
-import Component from "../../components/component-structure/react.jsx"
+import Component from "../../components/conditional-rendering/svelte.svelte"
 
 const filepath = path.join(
 process.cwd(),
 "src",
-"components/component-structure/react.jsx"
+"components/conditional-rendering/svelte.svelte"
 )
 
 const code = fs.readFileSync(`${filepath}`, "utf8")
@@ -24,7 +24,7 @@ const code = fs.readFileSync(`${filepath}`, "utf8")
       </div>
       <div class="gap-2 flex items-end">
         <span class="text-5xl flex-1 capitalize"
-          >component structure: react</span
+          >conditional rendering: svelte</span
         >
         <a href="react" class="text-2xl underline">[ React ]</a>
         <a href="vue" class="text-2xl underline">[ Vue ]</a>
@@ -36,14 +36,14 @@ const code = fs.readFileSync(`${filepath}`, "utf8")
         class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl overflow-y-scroll no-scrollbar p-8"
       >
         <div class="scale-150">
-          <Code code={code.replaceAll(/\s*class(Name)?=\".+?\"/g, "")} lang="javascript" theme="one-dark-pro" />
+          <Code code={code.replaceAll(/\s*class(Name)?=\".+?\"/g, "")} lang="svelte" theme="one-dark-pro" />
         </div>
       </div>
       <div
         class="w-1/2 grid place-content-center h-full border rounded-xl overflow-y-scroll no-scrollbar p-8"
       >
         <div class="scale-[3]">
-          <Component client:only={"react"} />
+          <Component client:only={"svelte"} />
         </div>
       </div>
     </section>

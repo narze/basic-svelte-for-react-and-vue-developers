@@ -36,7 +36,7 @@ const code = fs.readFileSync(`${filepath}`, "utf8")
         class="w-1/2 grid place-content-center h-full bg-[#282c34] rounded-xl overflow-y-scroll no-scrollbar p-8"
       >
         <div class="scale-150">
-          <Code code={code.replaceAll(/\s*class(Name)?=\".+\"/g, "")} lang="javascript" theme="one-dark-pro" />
+          <Code code={code.replaceAll(/\s*class(Name)?=\".+?\"/g, "")} lang="javascript" theme="one-dark-pro" />
         </div>
       </div>
       <div

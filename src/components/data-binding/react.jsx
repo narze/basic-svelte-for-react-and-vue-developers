@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react"
+import { useState } from "react"
 
 export default function Component() {
   const [value, setValue] = useState("Hello")
