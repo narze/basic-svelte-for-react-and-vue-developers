@@ -2,7 +2,7 @@
   let count = 0
 
   // Reactive Statement
-  $: countDoubled = count * 2
+  $: countDoubled = count * 2 // FIXME
 </script>
 
 <div class="flex flex-col gap-4">

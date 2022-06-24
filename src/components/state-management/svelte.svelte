@@ -9,5 +9,5 @@
 
   <button class="border btn" on:click={() => count--}> -1 </button>
 
-  <button class="border btn" on:click={() => count = 0}> Reset </button>
+  <button class="border btn" on:click={() => (count = 0)}> Reset </button>
 </div>

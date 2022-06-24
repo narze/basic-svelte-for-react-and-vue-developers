@@ -1,4 +1,4 @@
-<script lang="js">
+<script lang="ts">
   let value = "hello"
 </script>
 
@@ -6,7 +6,6 @@
   Data binding with Svelte
 
   <input type="text" class="input input-bordered" bind:value />
-  <!-- Shorthand: <input type="text" class="input input-bordered" bind:value /> -->
 
-  Value: {value}
+  Value: {value + 1}
 </div>
