@@ -1,12 +1,15 @@
 <script lang="js">
-  let value = "hello"
+  let count = 0
 </script>
 
 <div class="flex flex-col gap-4 items-center">
-  Data binding with Svelte
+  Conditional Rendering with Svelte
 
-  <input type="text" class="input input-bordered" bind:value />
-  <!-- Shorthand: <input type="text" class="input input-bordered" bind:value /> -->
+  <button on:click={() => count++} class="btn"> +1 </button>
 
-  Value: {value}
+  {#if count % 2 === 0}
+    <div>{count} is even</div>
+  {:else}
+    <div>{count} is odd</div>
+  {/if}
 </div>

@@ -1,11 +1,8 @@
-import { useState, useMemo } from "react"
+import { useState } from "react"
 
 export default function Component() {
   const [count, setCount] = useState(0)
 
-  function onChange(e) {
-    setValue(e.currentTarget.value)
-  }
   return (
     <div className="flex flex-col gap-4 items-center">
       Conditional Rendering with React
