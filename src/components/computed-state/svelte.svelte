@@ -1,6 +1,7 @@
 <script lang="js">
   let count = 0
 
+  // Reactive Statement
   $: countDoubled = count * 2
 </script>
 

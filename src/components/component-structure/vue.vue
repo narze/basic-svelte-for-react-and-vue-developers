@@ -1,9 +1,20 @@
 <script setup>
-import { onMounted } from "vue"
+  import { onMounted } from "vue"
 
-onMounted(() => {
-  console.log(`Hello from Vue!`)
-})
+  // Lifecycle
+  onMounted(() => {
+    console.log(`Hello from Vue!`)
+  })
 </script>
 
-<template>Hello, world!</template>
+<template>
+  <p>Hello, world!</p>
+</template>
+
+<style>
+  p {
+    color: red;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 2em;
+  }
+</style>
